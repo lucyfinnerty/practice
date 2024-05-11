@@ -128,6 +128,12 @@ public class GamePanel extends JPanel implements ActionListener {
             timer.stop();
         }
     }
+    public void playAgain() {
+        bodyParts = 6;
+        applesEaten = 0;
+        direction = 'R';
+        GameFrame gf = new GameFrame();
+    }
     public void gameOver(Graphics g) {
         g.setColor(Color.RED);
         g.setFont(new Font("Monospace", Font.BOLD, 40));
@@ -138,6 +144,11 @@ public class GamePanel extends JPanel implements ActionListener {
         g.setFont(new Font("Monospace", Font.BOLD, 75));
         FontMetrics metrics2 = getFontMetrics(g.getFont());
         g.drawString("game over", (SCREEN_WIDTH - metrics2.stringWidth("game over"))/2, SCREEN_HEIGHT/2);
+
+        g.setColor(new Color(50,150,240));
+        g.setFont(new Font("Monospace", Font.BOLD, 20));
+        FontMetrics metrics3 = getFontMetrics(g.getFont());
+        g.drawString("play again? press y", (SCREEN_WIDTH - metrics3.stringWidth("play again? press y"))/2, SCREEN_WIDTH - metrics3.stringWidth("play again? press y") + metrics1.getHeight() + 30 );
     }
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -171,6 +182,11 @@ public class GamePanel extends JPanel implements ActionListener {
                     if(direction != 'U') {
                         direction = 'D';
                     }
+                    break;
+                case KeyEvent.VK_Y:
+                    if(!running) {
+                        playAgain();
+                    }   
                     break;
             }
         }
