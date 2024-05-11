@@ -1,1 +1,1 @@
-# practice
+Here I will be doing projects to practice java, python, html, css, js, and more.
