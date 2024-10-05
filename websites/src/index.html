@@ -1,77 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="style.css">
-        <title>happy planning</title>
-    </head>
-    <body>
-        <div id="wrapper">
-            <header>
-                <img src="smileyface.png">
-                <h2>happy planning</h2>
-            </header>
-            <nav>   
-            </nav>
-            <main>
-                <div id="container">
-                    <div class="day">
-                        <h3>sunday</h3>
-                        <button onclick="addTask('sunday')">add task</button>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>happy planning</title>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <img src="smileyface.png">
+            <h2>happy planning</h2>
+        </header>
+        <nav>   
+        </nav>
+        <main>
+            <div id="container">
+                <div class="day">
+                    <h3>sunday</h3>
+                    <button onclick="showInput('sunday')">Add Task</button>
+                    <div id="sunday-task-form" style="display: none;">
                         <input type="text" id="sunday-input" placeholder="Enter task" />
-                        <ul id="sunday-tasks"></ul>
+                        <button id="submit-button" onclick="addTask('sunday')">Submit Task</button>
                     </div>
-                    <div class="vertical-line"></div>
-                    
-                    <div class="day">
-                        <h3>monday</h3>
-                        <button onclick="addTask('monday')">add task</button>
-                        <input type="text" id="monday-input" placeholder="Enter task" />
-                        <ul id="monday-tasks"></ul>
-                    </div>
-                    <div class="vertical-line"></div>
-    
-                    <div class="day">
-                        <h3>tuesday</h3>
-                        <button onclick="addTask('tuesday')">add task</button>
-                        <input type="text" id="tuesday-input" placeholder="Enter task" />
-                        <ul id="tuesday-tasks"></ul>
-                    </div>
-                    <div class="vertical-line"></div>
-    
-                    <div class="day">
-                        <h3>wednesday</h3>
-                        <button onclick="addTask('wednesday')">add task</button>
-                        <input type="text" id="wednesday-input" placeholder="Enter task" />
-                        <ul id="wednesday-tasks"></ul>
-                    </div>
-                    <div class="vertical-line"></div>
-    
-                    <div class="day">
-                        <h3>thursday</h3>
-                        <button onclick="addTask('thursday')">add task</button>
-                        <input type="text" id="thursday-input" placeholder="Enter task" />
-                        <ul id="thursday-tasks"></ul>
-                    </div>
-                    <div class="vertical-line"></div>
-    
-                    <div class="day">
-                        <h3>friday</h3>
-                        <button onclick="addTask('friday')">add task</button>
-                        <input type="text" id="friday-input" placeholder="Enter task" />
-                        <ul id="friday-tasks"></ul>
-                    </div>
-                    <div class="vertical-line"></div>
-    
-                    <div class="day">
-                        <h3>saturday</h3>
-                        <button onclick="addTask('saturday')">add task</button>
-                        <input type="text" id="saturday-input" placeholder="Enter task" />
-                        <ul id="saturday-tasks"></ul>
-                    </div>
+                    <ul id="sunday-tasks"></ul>
                 </div>
-            </main>
-        </div>
-        <script src="script.js"></script>
-    </body>
+                <div class="vertical-line"></div>
+
+                <div class="day">
+                    <h3>monday</h3>
+                    <button onclick="showInput('monday')">Add Task</button>
+                    <div id="monday-task-form" style="display: none;">
+                        <input type="text" id="monday-input" placeholder="Enter task" />
+                        <button id="submit-button" onclick="addTask('monday')">Submit Task</button>
+                    </div>
+                    <ul id="monday-tasks"></ul>
+                </div>
+                <div class="vertical-line"></div>
+
+                <div class="day">
+                    <h3>tuesday</h3>
+                    <button onclick="showInput('tuesday')">Add Task</button>
+                    <div id="tuesday-task-form" style="display: none;">
+                        <input type="text" id="tuesday-input" placeholder="Enter task" />
+                        <button id="submit-button" onclick="addTask('tuesday')">Submit Task</button>
+                    </div>
+                    <ul id="tuesday-tasks"></ul>
+                </div>
+                <div class="vertical-line"></div>
+
+                <div class="day">
+                    <h3>wednesday</h3>
+                    <button onclick="showInput('wednesday')">Add Task</button>
+                    <div id="wednesday-task-form" style="display: none;">
+                        <input type="text" id="wednesday-input" placeholder="Enter task" />
+                        <button id="submit-button" onclick="addTask('wednesday')">Submit Task</button>
+                    </div>
+                    <ul id="wednesday"></ul>
+                </div>
+                <div class="vertical-line"></div>
+
+                <div class="day">
+                    <h3>thursday</h3>
+                    <button onclick="showInput('thursday')">Add Task</button>
+                    <div id="thursday-task-form" style="display: none;">
+                        <input type="text" id="thursday-input" placeholder="Enter task" />
+                        <button id="submit-button" onclick="addTask('thursday')">Submit Task</button>
+                    </div>
+                    <ul id="thursday-tasks"></ul>
+                </div>
+                <div class="vertical-line"></div>
+
+                <div class="day">
+                    <h3>friday</h3>
+                    <button onclick="showInput('friday')">Add Task</button>
+                    <div id="friday-task-form" style="display: none;">
+                        <input type="text" id="friday-input" placeholder="Enter task" />
+                        <button id="submit-button" onclick="addTask('friday')">Submit Task</button>
+                    </div>
+                    <ul id="friday-tasks"></ul>
+                </div>
+                <div class="vertical-line"></div>
+
+                <div class="day">
+                    <h3>saturday</h3>
+                    <button onclick="showInput('saturday')">Add Task</button>
+                    <div id="saturday-task-form" style="display: none;">
+                        <input type="text" id="saturday-input" placeholder="Enter task" />
+                        <button id="submit-button" onclick="addTask('saturday')">Submit Task</button>
+                    </div>
+                    <ul id="saturday-tasks"></ul>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
 </html>
