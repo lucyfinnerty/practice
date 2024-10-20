@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Anti-Distraction Mode",
+    "description": "A Chrome extension to block distracting websites during work sessions.",
+    "version": "1.0",
+    "permissions": [
+      "alarms",
+      "tabs",
+      "webRequest",
+      "storage",
+      "notifications",
+      "webRequestBlocking"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_title": "Anti-Distraction Mode"
+    },
+    "host_permissions": [
+      "*://*/*"
+    ]
+  }
