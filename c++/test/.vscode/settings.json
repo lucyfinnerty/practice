@@ -1,0 +1,8 @@
+{
+    "logging": {
+        "engineLogging": false
+    },
+    "files.associations": {
+        "iostream": "cpp"
+    }
+}
