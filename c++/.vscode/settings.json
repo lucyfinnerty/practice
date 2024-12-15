@@ -3,6 +3,12 @@
         "engineLogging": false
     },
     "files.associations": {
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "stack": "cpp",
+        "deque": "cpp",
+        "initializer_list": "cpp",
+        "utility": "cpp",
+        "xstring": "cpp",
+        "xutility": "cpp"
     }
 }
