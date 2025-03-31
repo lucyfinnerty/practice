@@ -14,7 +14,7 @@ class Calculator extends React.Component {
     }
 
     operationHandler(operation) {
-        if(this.state.numberIdx == 1) {
+        if(this.state.numberIdx === 1) {
             this.equalHandler();
             return;
         }
