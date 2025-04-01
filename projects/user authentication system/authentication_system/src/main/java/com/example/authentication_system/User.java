@@ -1,55 +1,61 @@
 package com.example.authentication_system;
 
 import jakarta.persistence.*;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
-
-import java.util.Collection;
-import java.util.List;
 
 @Entity
-public class User implements UserDetails{ // UserDetails - spring security interface for user authentication
+@Table(name = "users")
+public class User { 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
+    @Column(nullable = false, unique = true)
     private String username;
+
+    @Column(nullable = false)
     private String password;
+    
+    @Column(nullable = false)
     private String role;
 
-    // getters and setters
+    // Constructors
+    public User() {}
 
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of(() -> role);
+    public User(String username, String password, String role) {
+        this.username = username;
+        this.password = password;
+        this.role = role;
     }
 
-    @Override
+    // getters and setters
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
     public String getPassword() {
         return password;
     }
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
-    @Override
     public String getUsername() {
         return username;
     }
 
-    @Override
-    public boolean isAccountNonExpired() {
-        return true;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    @Override
-    public boolean isAccountNonLocked() {
-        return true;
+    public String getRole() {
+        return role;
     }
 
-    @Override
-    public boolean isCredentialsNonExpired() {
-        return true;
-    }
-
-    @Override
-    public boolean isEnabled() {
-        return true;
+    public void setRole(String role) {
+        this.role = role;
     }
 }
