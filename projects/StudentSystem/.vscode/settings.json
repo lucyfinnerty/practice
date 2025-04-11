@@ -1,0 +1,34 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "xprotocol",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 33060,
+            "driver": "MySQL",
+            "name": "Local Instance MySQL91",
+            "connectionTimeout": 30,
+            "username": "root",
+            "password": "Lucyaiden16",
+            "database": "demo"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "xprotocol",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 33060,
+            "driver": "MySQL",
+            "database": "student_system",
+            "username": "root",
+            "password": "Lucyaiden16!",
+            "connectionTimeout": 30,
+            "name": "MySQL Connection"
+        }
+    ]
+}
